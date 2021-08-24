@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;  
+}
+body{
+    // background-color: #e0e5ec;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid red;
+    padding: 10px 20px  10px 10px;
+    font-size: 20px;
+    box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
+    img{
+        width: 20%;
+        min-width: 150px;
+    }
+    ul{
+        list-style-type: none;
+    li{
+        float: left;
+        margin-right: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+}
+main{
+    .productAndDescription{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        .productDescripton{
+            // display: none;
+            padding: 20px;
+            img{
+              width: 100%;
+              border-radius: 20px;
+            }
+        }
+        
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            // border: 1px solid lightgray;
+            border-radius: 20px;
+            justify-content: center;
+            margin-right: 20px;
+            box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+            padding-top: 40px;
+            div{
+                // width: 20%;
+                // border: 1px solid lightgray;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 20px;
+                width: 300px;
+            box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    
+                }
+                .title{
+                    text-align: center;
+                    margin: 10px 0 15px;
+                    // font-weight: bold;
+                    // font-weight: 1.2rem;
+                }
+                .price{
+                    text-align: right;
+                    padding-right: 20px;
+                    margin: 10px 0;
+                    font-size: 20px;
+                    font-weight: 600px;
+                    color: rgb(212, 145, 20);
+                }
+                
+            }
+
+        }
+        aside{
+            width: 30%;
+            // border: 1px solid lightgray;
+            border-radius: 20px;
+            box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+
+        }
+
+    }
+}
+.products:hover{
+    cursor: pointer;
+    box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
+}

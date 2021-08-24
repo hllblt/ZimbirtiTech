@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px  10px 10px;
+  font-size: 20px;
+  -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
+          box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
+}
+
+header img {
+  width: 20%;
+  min-width: 150px;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  float: left;
+  margin-right: 30px;
+}
+
+header ul a {
+  text-decoration: none;
+  color: black;
+}
+
+main .productAndDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+main .productAndDescription .productDescripton {
+  padding: 20px;
+}
+
+main .productAndDescription .productDescripton img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+main .productAndDescription section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  border-radius: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+  -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+          box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+  padding-top: 40px;
+}
+
+main .productAndDescription section div {
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  width: 300px;
+  -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+          box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+}
+
+main .productAndDescription section div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+main .productAndDescription section div .title {
+  text-align: center;
+  margin: 10px 0 15px;
+}
+
+main .productAndDescription section div .price {
+  text-align: right;
+  padding-right: 20px;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 600px;
+  color: #d49114;
+}
+
+main .productAndDescription aside {
+  width: 30%;
+  border-radius: 20px;
+  -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+          box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+}
+
+.products:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
+          box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
