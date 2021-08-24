@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 header {
@@ -16,10 +16,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px  10px 10px;
+  padding: 10px 20px 10px 10px;
   font-size: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
+  min-width: 375px;
+  width: 100%;
 }
 
 header img {
@@ -50,15 +52,6 @@ main .productAndDescription {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-}
-
-main .productAndDescription .productDescripton {
-  padding: 20px;
-}
-
-main .productAndDescription .productDescripton img {
-  width: 100%;
-  border-radius: 20px;
 }
 
 main .productAndDescription section {
@@ -111,6 +104,58 @@ main .productAndDescription aside {
   border-radius: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+  display: none;
+  padding: 20px;
+}
+
+main .productAndDescription aside img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+main .productAndDescription aside #asideTitle {
+  margin-bottom: 20px;
+}
+
+main .productAndDescription aside #asideTitle + p {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+main .productAndDescription aside > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+main .productAndDescription aside > div div {
+  width: 35%;
+}
+
+main .productAndDescription aside > div div .asideDescText {
+  margin-bottom: 10px;
+}
+
+main .productAndDescription aside .quantity input {
+  width: 80px;
+  height: 20px;
+}
+
+main .productAndDescription aside button {
+  border: none;
+  padding: 10px 5px;
+  background-color: #eb5800;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-box-shadow: -8px -8px 12px #ebe6e6, 4px 4px 6px #a3b1c6;
+          box-shadow: -8px -8px 12px #ebe6e6, 4px 4px 6px #a3b1c6;
+}
+
+main .productAndDescription aside button + p {
+  margin-top: 20px;
 }
 
 .products:hover {
