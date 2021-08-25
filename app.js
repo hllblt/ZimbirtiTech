@@ -48,7 +48,19 @@ const choose = function(id){
   let asideDescription = document.querySelectorAll(`.productDescription>p`)[2];
   asideDescription.innerHTML = productDescs[newIndex];
 
-  //
+  //aside quantity 
+  let quantity = document.querySelector(`.productDescription input`);
+  quantity.value = 1
 
+  //aside total
+  let total = document.querySelectorAll(`.productDescription p`)[4];
+  total.innerHTML = quantity.value*Number(productPrice.slice(0,-1))+"₺";
+}
 
+const calcTotal = function(){
+  let quantity = document.querySelector(`.productDescription input`);
+  let total = document.querySelectorAll(`.productDescription p`)[4];
+  let asidePrice = document.querySelectorAll(`.productDescription>p`)[1].innerHTML;
+  total.innerHTML = quantity.value*Number(asidePrice.slice(0,-1))+"₺";
+  
 }
