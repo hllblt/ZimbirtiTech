@@ -28,7 +28,22 @@
     </header>
     <main>
         <section class="cart">
-            <ul id="cartList"></ul>
+            <ul id="cartList">
+                <li>Sample</li>
+                <li class="cartTitle">Title</li>
+                <li>Price</li>
+                <li>Quantity</li>
+                <li>Total</li>
+                <li>Remove</li>
+            </ul>
+            <!-- <ul class="productCartList" id="listItem1">
+                <li><img src="https://picsum.photos/id/620/600/400" alt=""></li>
+                <li class="cartTitle">Philips kulaklık</li>
+                <li>35.99₺</li>
+                <li><input type="number" value="2" name="" id=""></li>
+                <li>72</li>
+                <li><button>X</button></li>
+            </ul> -->
         </section>
         <div class="productAndDescription">
             <section class="mainPage">
@@ -40,42 +55,42 @@
                 <div class="products" id="product1" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.2</p><img src="https://picsum.photos/id/680/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">64.99₺</p>
                 </div>
                 <div class="products" id="product2" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.3</p><img src="https://picsum.photos/id/681/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">74.99₺</p>
                 </div>
                 <div class="products" id="product3" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.4</p><img src="https://picsum.photos/id/682/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">84.99₺</p>
                 </div>
                 <div class="products" id="product4" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.5</p><img src="https://picsum.photos/id/683/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">94.99₺</p>
                 </div>
                 <div class="products" id="product5" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.6</p><img src="https://picsum.photos/id/684/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">104.99₺</p>
                 </div>
                 <div class="products" id="product6" onclick="choose(this.id)">
                     <p class="title">Lorem ipsum dolor sit amet.</p><img src="https://picsum.photos/id/685/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">110.99₺</p>
                 </div>
                 <div class="products" id="product7" onclick="choose(this.id)">
                     <p class=" title">Lorem ipsum dolor sit amet.</p><img src="https://picsum.photos/id/686/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">124.99₺</p>
                 </div>
                 <div class="products" id="product8" onclick="choose(this.id)">
                     <p class=" title">Lorem ipsum dolor sit amet.</p><img src="https://picsum.photos/id/687/600/400"
                         alt="">
-                    <p class="price">54.99₺</p>
+                    <p class="price">123.99₺</p>
                 </div>
                 <div class="products" id="product9" onclick="choose(this.id)">
                     <p class=" title">Lorem ipsum dolor sit amet.</p><img src="https://picsum.photos/id/688/600/400"
@@ -168,7 +183,7 @@
                     <p class="asideDescText">Total</p>
                     <p>109.98₺</p>
                 </div>
-                <button id="addToCart">Add to Cart</button>
+                <button id="addToCart" onclick="addToCart()">Add to Cart</button>
             </div>
             <p id="asideDescription">Description</p>
         </aside>

@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
 }
+body{
+  min-width: 600px;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -13,6 +16,7 @@ header {
   font-size: 20px;
   box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
   width: 100%;
+  margin-bottom: 20px;
   img {
     width: 20%;
     min-width: 150px;
@@ -162,4 +166,32 @@ main {
 
 .cart{
   // display: none;
+  box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+  border-radius: 20px;
+  margin: 10px 30px 0 10px;
+  padding: 20px 0;
+  // border: 1px solid red;
+  ul{
+    list-style-type: none;
+    margin:0 0 20px 40px;
+    // border: 1px solid red;
+    display: flex;
+    
+    li{
+      // float: left;
+      width: 12%;
+      text-align: center;
+      // border: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 40px;
+      }
+    }
+    .cartTitle{
+      width: 30%;
+      justify-content: left
+    }
+  }
 }
