@@ -105,6 +105,7 @@ main .productAndDescription aside {
   border-radius: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
+  display: none;
   padding: 20px;
 }
 
@@ -132,6 +133,7 @@ main .productAndDescription aside > div {
 
 main .productAndDescription aside > div div {
   width: 35%;
+  text-align: center;
 }
 
 main .productAndDescription aside > div div .asideDescText {
@@ -162,5 +164,28 @@ main .productAndDescription aside button + p {
   cursor: pointer;
   -webkit-box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
           box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
+}
+
+#asideDescription {
+  text-align: justify;
+}
+
+#closer {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+#closer:hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+#addToCart:hover {
+  background-color: #d24e00;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

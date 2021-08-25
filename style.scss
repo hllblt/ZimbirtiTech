@@ -82,7 +82,7 @@ main {
       // border: 1px solid lightgray;
       border-radius: 20px;
       box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
-      // display: none;
+      display: none;
       padding: 20px;
       img {
         width: 100%;
@@ -114,6 +114,7 @@ main {
         input {
           width: 80px;
           height: 20px;
+          // font-size: 30px ;
         }
       }
       button {
@@ -139,4 +140,26 @@ main {
 
 #asideDescription{
   text-align: justify;
+}
+#closer{
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  float: right;
+}
+#closer:hover{
+  background-color: lighten( #000000,30%);
+  cursor: pointer;
+}
+#addToCart:hover{
+  background-color: darken(#eb5800, 5%);
+  cursor: pointer;
+}
+
+///////////////// Cart List/////////////////
+
+.cart{
+  // display: none;
 }

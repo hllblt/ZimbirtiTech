@@ -26,8 +26,12 @@ const productDescs = [
 ];
 
 
-const choose = function(id){
+const choose = function (id) {
   let newIndex = Number(id.slice(7));
+
+  //aside visibility
+  let aside = document.querySelector("aside");
+  aside.style.display = "block";
 
   // assigning product img to aside img 
   let asideImg = document.querySelector(`.productDescription img`);
@@ -42,7 +46,7 @@ const choose = function(id){
   //assigning product price to aside price
   let asidePrice = document.querySelectorAll(`.productDescription>p`)[1];
   let productPrice = document.querySelectorAll(`#${id} p`)[1].innerHTML;
-  asidePrice.innerHTML = productPrice
+  asidePrice.innerHTML = productPrice;
 
   //assigning product description to aside description
   let asideDescription = document.querySelectorAll(`.productDescription>p`)[2];
@@ -50,17 +54,24 @@ const choose = function(id){
 
   //aside quantity 
   let quantity = document.querySelector(`.productDescription input`);
-  quantity.value = 1
+  quantity.value = 1;
 
   //aside total
   let total = document.querySelectorAll(`.productDescription p`)[4];
-  total.innerHTML = quantity.value*Number(productPrice.slice(0,-1))+"₺";
+  total.innerHTML = quantity.value * Number(productPrice.slice(0, -1)) + "₺";
 }
-
-const calcTotal = function(){
+//calculating totalprice
+const calcTotal = function () {
   let quantity = document.querySelector(`.productDescription input`);
   let total = document.querySelectorAll(`.productDescription p`)[4];
   let asidePrice = document.querySelectorAll(`.productDescription>p`)[1].innerHTML;
-  total.innerHTML = quantity.value*Number(asidePrice.slice(0,-1))+"₺";
-  
+  total.innerHTML = quantity.value * Number(asidePrice.slice(0, -1)) + "₺";
+
 }
+//aside bar closer
+const close = function () {
+  let aside = document.querySelector("aside");
+  aside.style.display = "none";
+}
+const closerButton = document.getElementById("closer");
+closerButton.addEventListener("click", close);
