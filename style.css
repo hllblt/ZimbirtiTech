@@ -20,7 +20,6 @@ header {
   font-size: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
-  min-width: 375px;
   width: 100%;
 }
 
@@ -61,6 +60,7 @@ main .productAndDescription section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  min-width: 350px;
   border-radius: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -101,10 +101,10 @@ main .productAndDescription section div .price {
 
 main .productAndDescription aside {
   width: 30%;
+  min-width: 250px;
   border-radius: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
-  display: none;
   padding: 20px;
 }
 

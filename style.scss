@@ -12,7 +12,6 @@ header {
   padding: 10px 20px 10px 10px;
   font-size: 20px;
   box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 30px #ebe6e6;
-  min-width: 375px;
   width: 100%;
   img {
     width: 20%;
@@ -41,6 +40,7 @@ main {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+      min-width: 350px;
       // border: 1px solid lightgray;
       border-radius: 20px;
       justify-content: center;
@@ -78,10 +78,11 @@ main {
     }
     aside {
       width: 30%;
+      min-width: 250px;
       // border: 1px solid lightgray;
       border-radius: 20px;
       box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
-      display: none;
+      // display: none;
       padding: 20px;
       img {
         width: 100%;
@@ -133,4 +134,8 @@ main {
   cursor: pointer;
   box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2),
     4px 4px 24px rgba(255, 167, 4, 0.5);
+}
+
+#asideDescription{
+  text-align: justify;
 }
