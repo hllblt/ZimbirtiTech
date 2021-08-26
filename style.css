@@ -150,18 +150,28 @@ main .productAndDescription aside .quantity input {
   height: 20px;
 }
 
-main .productAndDescription aside button {
+main .productAndDescription aside #addToCart {
   border: none;
   padding: 10px 5px;
   background-color: #eb5800;
+  text-decoration: none;
   color: white;
   font-weight: bold;
   border-radius: 10px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 4px 4px 6px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 4px 4px 6px #a3b1c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main .productAndDescription aside button + p {
+main .productAndDescription aside #addToCart + p {
   margin-top: 20px;
 }
 
@@ -178,6 +188,8 @@ main .productAndDescription aside button + p {
 #closer {
   background-color: black;
   color: white;
+  border: none;
+  border-radius: 10px;
   font-size: 25px;
   padding: 5px 15px;
   margin-bottom: 10px;
@@ -202,9 +214,25 @@ main .productAndDescription aside button + p {
   padding: 20px 0;
 }
 
+.cart p {
+  margin-left: 120px;
+}
+
+.cart p #yourCart {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+}
+
+.cart p #isEmpty {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-left: 10px;
+  color: gray;
+}
+
 .cart ul {
   list-style-type: none;
-  margin: 0 0 20px 40px;
+  margin: 20px 0 0px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,5 +261,29 @@ main .productAndDescription aside button + p {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+}
+
+.remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background-color: rgba(211, 211, 211, 0.37);
 }
 /*# sourceMappingURL=style.css.map */

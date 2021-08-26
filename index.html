@@ -12,22 +12,24 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <img src="./assets/logo.png" alt="">
         <div>
             <ul class="navbarlinks">
                 <li class="links" id="about"><a href="#"> About</a></li>
                 <li class="links" id="product"><a href="#">Products</a></li>
                 <li class="links" id="contact"><a href="#">Contact</a></li>
-                <li class="links" id="cart"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="links" id="cart" onclick='document.querySelector(".cart").style.display = "block"'><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
     </header>
     <main>
-        <section class="cart">
+        <section id="cartBar" class="cart">
+            <p><span id="yourCart">Your Cart</span><span id="isEmpty">is empty.</span></p>
             <ul id="cartList">
                 <li>Sample</li>
                 <li class="cartTitle">Title</li>
@@ -167,26 +169,26 @@
                         alt="">
                     <p class="price">54.99₺</p>
                 </div>
-        
-        </section>
-        <aside class="productDescription">
-            <button id="closer" ><i class="fas fa-chevron-right"></i></button>
-            <img src="https://picsum.photos/id/680/600/400" alt="">
-            <p id="asideTitle">Philips 24" Full HD IPS Monitor</p>
-            <p>99,99 ₺</p>
-            <div>
-                <div class="quantity">
-                    <p class="asideDescText">Quantity</p>
-                    <input type="number" onchange="calcTotal()" id="inputQuantity" min="1">
-                </div>
+
+            </section>
+            <aside class="productDescription">
+                <button id="closer"><i class="fas fa-chevron-right"></i></button>
+                <img src="https://picsum.photos/id/680/600/400" alt="">
+                <p id="asideTitle">Philips 24" Full HD IPS Monitor</p>
+                <p>99,99 ₺</p>
                 <div>
-                    <p class="asideDescText">Total</p>
-                    <p>109.98₺</p>
+                    <div class="quantity">
+                        <p class="asideDescText">Quantity</p>
+                        <input type="number" onchange="calcTotal()" id="inputQuantity" min="1">
+                    </div>
+                    <div>
+                        <p class="asideDescText">Total</p>
+                        <p>109.98₺</p>
+                    </div>
+                    <a id="addToCart" href="#header" onclick="addToCart()">Add to Cart</a>
                 </div>
-                <button id="addToCart" onclick="addToCart()">Add to Cart</button>
-            </div>
-            <p id="asideDescription">Description</p>
-        </aside>
+                <p id="asideDescription">Description</p>
+            </aside>
         </div>
     </main>
     <footer></footer>

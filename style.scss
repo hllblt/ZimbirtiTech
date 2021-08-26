@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
 }
-body{
+body {
   min-width: 600px;
 }
 header {
@@ -121,14 +121,18 @@ main {
           // font-size: 30px ;
         }
       }
-      button {
+      #addToCart {
         border: none;
         padding: 10px 5px;
         background-color: #eb5800;
+        text-decoration: none;
         color: white;
         font-weight: bold;
         border-radius: 10px;
         box-shadow: -8px -8px 12px #ebe6e6, 4px 4px 6px #a3b1c6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & + p {
           margin-top: 20px;
         }
@@ -142,42 +146,56 @@ main {
     4px 4px 24px rgba(255, 167, 4, 0.5);
 }
 
-#asideDescription{
+#asideDescription {
   text-align: justify;
 }
-#closer{
+#closer {
   background-color: black;
   color: white;
+  border: none;
+  border-radius: 10px;
   font-size: 25px;
   padding: 5px 15px;
   margin-bottom: 10px;
   float: right;
 }
-#closer:hover{
-  background-color: lighten( #000000,30%);
+#closer:hover {
+  background-color: lighten(#000000, 30%);
   cursor: pointer;
 }
-#addToCart:hover{
+#addToCart:hover {
   background-color: darken(#eb5800, 5%);
   cursor: pointer;
 }
 
 ///////////////// Cart List/////////////////
 
-.cart{
+.cart {
   // display: none;
   box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   border-radius: 20px;
   margin: 10px 30px 0 10px;
   padding: 20px 0;
-  // border: 1px solid red;
-  ul{
+  p {
+    margin-left: 120px ;
+    #yourCart{
+      font-size: 40px;
+      font-family: 'Pacifico', cursive;
+    }
+    #isEmpty{
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      margin-left:10px;
+      color: gray;
+    }
+  }
+  ul {
     list-style-type: none;
-    margin:0 0 20px 40px;
+    margin: 20px 0 0px 40px;
     // border: 1px solid red;
     display: flex;
-    
-    li{
+
+    li {
       // float: left;
       width: 12%;
       text-align: center;
@@ -185,13 +203,30 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         width: 40px;
       }
     }
-    .cartTitle{
+    .cartTitle {
       width: 30%;
-      justify-content: left
+      justify-content: left;
     }
   }
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.remove:hover {
+  background-color: rgba(211, 211, 211, 0.37);
 }
