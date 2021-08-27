@@ -149,6 +149,8 @@ main {
   }
 }
 .products:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
   cursor: pointer;
   box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2),
     4px 4px 24px rgba(255, 167, 4, 0.5);
@@ -187,6 +189,7 @@ main {
   border-radius: 20px;
   margin: 10px 30px 0 10px;
   padding: 20px 0;
+  overflow: auto;
   p {
     margin-left: 120px;
     #yourCart {
@@ -205,7 +208,7 @@ main {
     justify-content: space-between;
     #closeCart {
       margin-right: 20px;
-      height: 30px;
+      // height: 30px;
       padding: 20px 10px;
       font-size: 25px;
       border: none;
@@ -267,4 +270,13 @@ main {
 }
 #cartList{
   display: none;
+}
+
+#cartIconQuantity{
+  color: red;
+  font-weight: bold;
+}
+
+.products{
+  transition: 0.3s;
 }

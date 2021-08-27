@@ -30,21 +30,24 @@ let productID;
 
 const cartTotal = () => {
   let cartUl = document.querySelectorAll(`#cartBar ul`);
+  let cartIconQuantity = document.querySelector("#cartIconQuantity");
   if(cartUl.length == 1){
     document.getElementById("isEmpty").innerHTML = "is empty.";
     document.getElementById("cartList").style.display = "none";
+    cartIconQuantity.innerHTML = "";
   }
   else{
     document.getElementById("cartList").style.display = "flex";
     document.getElementById("isEmpty").innerHTML = `${cartUl.length -1} Items`;
+    cartIconQuantity.innerHTML = `<sup>${cartUl.length -1}</sup>`;
   }
 }
 
-const remove = () => {
+const remove = (i) => {
   // document.getElementById(id).remove();
   // let indexRemove = arrayID.indexOf(id);
   // arrayID.splice(indexRemove, 1);
-  console.log("merhaba");
+  console.log("merhaba", i);
 }
 // remove();
 const choose = function (id) {
@@ -157,7 +160,10 @@ const addToCart = () => {
     let newRemove = document.createElement("button");
     newRemove.innerHTML = "X";
     newRemove.className = "remove";
-    newRemove.onclick = remove;
+    newRemove.onclick = ()=>{
+      console.log("parametric click")
+      remove(this)
+    };
     arrayLi[5].appendChild(newRemove);
 
     //appending lis to ul

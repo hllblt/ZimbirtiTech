@@ -187,6 +187,10 @@ main .productAndDescription aside #addToCart + p {
 }
 
 .products:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   -webkit-box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
           box-shadow: -4px -4px 24px rgba(247, 247, 2, 0.2), 4px 4px 24px rgba(255, 167, 4, 0.5);
@@ -229,6 +233,7 @@ main .productAndDescription aside #addToCart + p {
   border-radius: 20px;
   margin: 10px 30px 0 10px;
   padding: 20px 0;
+  overflow: auto;
 }
 
 .cart p {
@@ -258,7 +263,6 @@ main .productAndDescription aside #addToCart + p {
 
 .cart #cartInfo #closeCart {
   margin-right: 20px;
-  height: 30px;
   padding: 20px 10px;
   font-size: 25px;
   border: none;
@@ -345,5 +349,15 @@ main .productAndDescription aside #addToCart + p {
 
 #cartList {
   display: none;
+}
+
+#cartIconQuantity {
+  color: red;
+  font-weight: bold;
+}
+
+.products {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
