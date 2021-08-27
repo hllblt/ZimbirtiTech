@@ -12,7 +12,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,13 +23,17 @@
                 <li class="links" id="about"><a href="#"> About</a></li>
                 <li class="links" id="product"><a href="#">Products</a></li>
                 <li class="links" id="contact"><a href="#">Contact</a></li>
-                <li class="links" id="cart" onclick='document.querySelector(".cart").style.display = "block"'><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="links" id="cart" onclick='document.querySelector(".cart").style.display = "block"'><a
+                        href="#"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
     </header>
     <main>
         <section id="cartBar" class="cart">
-            <p><span id="yourCart">Your Cart</span><span id="isEmpty">is empty.</span></p>
+            <div id="cartInfo">
+                <p><span id="yourCart">Your Cart</span><span id="isEmpty">is empty.</span></p>
+                <button id="closeCart" onclick='document.querySelector(".cart").style.display = "none"'><i class="fas fa-chevron-up"></i></button>
+            </div>
             <ul id="cartList">
                 <li>Sample</li>
                 <li class="cartTitle">Title</li>

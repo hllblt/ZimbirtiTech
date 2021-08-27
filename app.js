@@ -28,7 +28,7 @@ const productDescs = [
 let arrayID = [];
 let productID;
 
-const remove = (id) => {
+const cartTotal = () => {
   let cartUl = document.querySelectorAll(`#cartBar ul`);
   if(cartUl.length == 1){
     document.getElementById("isEmpty").innerHTML = "is empty.";
@@ -39,7 +39,14 @@ const remove = (id) => {
     document.getElementById("isEmpty").innerHTML = `${cartUl.length -1} Items`;
   }
 }
-remove();
+
+const remove = () => {
+  // document.getElementById(id).remove();
+  // let indexRemove = arrayID.indexOf(id);
+  // arrayID.splice(indexRemove, 1);
+  console.log("merhaba");
+}
+// remove();
 const choose = function (id) {
   let newIndex = Number(id.slice(7));
   productID = id;
@@ -164,6 +171,7 @@ const addToCart = () => {
     // adding id of new item to array to check if it exists in the list
     arrayID.push(newItem.id);
   }
+  cartTotal();
 };
 
 const reCalcTotal = () => {

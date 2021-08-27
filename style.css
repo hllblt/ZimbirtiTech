@@ -43,8 +43,19 @@ header ul li {
 }
 
 header ul a {
+  padding: 10px;
+  border-radius: 10px;
   text-decoration: none;
   color: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header ul a:hover {
+  color: white;
+  background-color: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 main .productAndDescription {
@@ -194,10 +205,15 @@ main .productAndDescription aside #addToCart + p {
   padding: 5px 15px;
   margin-bottom: 10px;
   float: right;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 #closer:hover {
-  background-color: #4d4d4d;
+  background-color: white;
+  color: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
   cursor: pointer;
 }
 
@@ -207,6 +223,7 @@ main .productAndDescription aside #addToCart + p {
 }
 
 .cart {
+  display: none;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   border-radius: 20px;
@@ -220,14 +237,53 @@ main .productAndDescription aside #addToCart + p {
 
 .cart p #yourCart {
   font-size: 40px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .cart p #isEmpty {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 20px;
   margin-left: 10px;
   color: gray;
+}
+
+.cart #cartInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart #cartInfo #closeCart {
+  margin-right: 20px;
+  height: 30px;
+  padding: 20px 10px;
+  font-size: 25px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.cart #cartInfo #closeCart:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .cart ul {
@@ -285,5 +341,9 @@ main .productAndDescription aside #addToCart + p {
 
 .remove:hover {
   background-color: rgba(211, 211, 211, 0.37);
+}
+
+#cartList {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
