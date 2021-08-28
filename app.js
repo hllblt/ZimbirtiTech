@@ -31,24 +31,23 @@ let productID;
 const cartTotal = () => {
   let cartUl = document.querySelectorAll(`#cartBar ul`);
   let cartIconQuantity = document.querySelector("#cartIconQuantity");
-  if(cartUl.length == 1){
+  if (cartUl.length == 1) {
     document.getElementById("isEmpty").innerHTML = "is empty.";
     document.getElementById("cartList").style.display = "none";
     cartIconQuantity.innerHTML = "";
-  }
-  else{
+  } else {
     document.getElementById("cartList").style.display = "flex";
-    document.getElementById("isEmpty").innerHTML = `${cartUl.length -1} Items`;
-    cartIconQuantity.innerHTML = `<sup>${cartUl.length -1}</sup>`;
+    document.getElementById("isEmpty").innerHTML = `${cartUl.length - 1} Items`;
+    cartIconQuantity.innerHTML = `<sup>${cartUl.length - 1}</sup>`;
   }
-}
+};
 
-const remove = (i) => {
-  // document.getElementById(id).remove();
-  // let indexRemove = arrayID.indexOf(id);
-  // arrayID.splice(indexRemove, 1);
-  console.log("merhaba", i);
-}
+const remove = (id) => {
+  document.getElementById(id).remove();
+  let indexRemove = arrayID.indexOf(id);
+  arrayID.splice(indexRemove, 1);
+  cartTotal();
+};
 // remove();
 const choose = function (id) {
   let newIndex = Number(id.slice(7));
@@ -83,7 +82,8 @@ const choose = function (id) {
 
   //aside total
   let total = document.querySelectorAll(`.productDescription p`)[4];
-  total.innerHTML = (quantity.value * Number(productPrice.slice(0, -1))).toFixed(2) + "₺";
+  total.innerHTML =
+    (quantity.value * Number(productPrice.slice(0, -1))).toFixed(2) + " €";
 };
 
 //calculating totalprice
@@ -92,7 +92,8 @@ const calcTotal = function () {
   let total = document.querySelectorAll(`.productDescription p`)[4];
   let asidePrice = document.querySelectorAll(`.productDescription>p`)[1]
     .innerHTML;
-  total.innerHTML = (quantity.value * Number(asidePrice.slice(0, -1))).toFixed(2) + "₺";
+  total.innerHTML =
+    (quantity.value * Number(asidePrice.slice(0, -1))).toFixed(2) + " €";
 };
 //aside bar closer
 const close = function () {
@@ -115,12 +116,11 @@ const addToCart = () => {
     let cartQuantity = document.querySelector(`#Cart${productID} input`);
     cartQuantity.value = Number(cartQuantity.value) + Number(quantity);
     let cartLi = document.querySelectorAll(`#Cart${productID} li`);
-    cartLi[4].innerHTML = (Number(cartQuantity.value) * Number(cartLi[2].innerHTML.slice(0, -1))).toFixed(2) + "₺";
-  }
-
-
-
-  else {
+    cartLi[4].innerHTML =
+      (
+        Number(cartQuantity.value) * Number(cartLi[2].innerHTML.slice(0, -1))
+      ).toFixed(2) + " €";
+  } else {
     //creating new ul for new item to cart list
     let newItem = document.createElement("ul");
     newItem.className = "productCartList";
@@ -153,18 +153,13 @@ const addToCart = () => {
     arrayLi[3].appendChild(newInput);
 
     //calculating and assigning total price information
-    arrayLi[4].innerHTML = (newInput.value * Number(arrayLi[2].innerHTML.slice(0, -1))).toFixed(2) + "₺";
-    // console.log(arrayLi[3]);
+    arrayLi[4].innerHTML =
+      (newInput.value * Number(arrayLi[2].innerHTML.slice(0, -1))).toFixed(2) +
+      " €";
 
     //creating remove button
-    let newRemove = document.createElement("button");
-    newRemove.innerHTML = "X";
-    newRemove.className = "remove";
-    newRemove.onclick = ()=>{
-      console.log("parametric click")
-      remove(this)
-    };
-    arrayLi[5].appendChild(newRemove);
+    arrayLi[5].innerHTML =
+      '<button class="remove" onclick="remove(this.parentElement.parentElement.id)"><i class="fas fa-window-close"></i></button>';
 
     //appending lis to ul
     for (let i = 0; i < 6; i++) {
@@ -183,5 +178,8 @@ const addToCart = () => {
 const reCalcTotal = () => {
   let cartQuantity = document.querySelector(`#Cart${productID} input`);
   let cartLi = document.querySelectorAll(`#Cart${productID} li`);
-  cartLi[4].innerHTML = (Number(cartQuantity.value) * Number(cartLi[2].innerHTML.slice(0, -1))).toFixed(2) + "₺";
-}
+  cartLi[4].innerHTML =
+    (
+      Number(cartQuantity.value) * Number(cartLi[2].innerHTML.slice(0, -1))
+    ).toFixed(2) + " €";
+};
