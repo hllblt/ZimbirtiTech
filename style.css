@@ -62,11 +62,12 @@ main .productAndDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 main .productAndDescription section {
@@ -81,7 +82,6 @@ main .productAndDescription section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 20px;
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   padding-top: 40px;
@@ -123,6 +123,7 @@ main .productAndDescription aside {
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   display: none;
   padding: 20px;
+  margin-left: 20px;
 }
 
 main .productAndDescription aside img {
@@ -231,7 +232,7 @@ main .productAndDescription aside #addToCart + p {
   -webkit-box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
           box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   border-radius: 20px;
-  margin: 10px 30px 0 10px;
+  margin: 10px 10px 0 10px;
   padding: 20px 0;
   overflow: auto;
 }
@@ -263,6 +264,7 @@ main .productAndDescription aside #addToCart + p {
 
 .cart #cartInfo #closeCart {
   margin-right: 20px;
+  height: 30px;
   padding: 20px 10px;
   font-size: 25px;
   border: none;
@@ -359,5 +361,19 @@ main .productAndDescription aside #addToCart + p {
 .products {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+h3 {
+  text-align: right;
+  margin: 50px;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-style: italic;
+  color: #e3d8ec;
+}
+
+h3 span {
+  font-size: 10px;
+  font-family: "Pacifico", cursive;
 }
 /*# sourceMappingURL=style.css.map */

@@ -146,15 +146,12 @@ const addToCart = () => {
     arrayLi[2].innerHTML = asidePrice;
 
     //creating and assinging quantity information
-    let newInput = document.createElement("input");
-    newInput.value = quantity;
-    newInput.type = "number";
-    newInput.onchange = reCalcTotal;
-    arrayLi[3].appendChild(newInput);
+    arrayLi[3].innerHTML = `<input value="${quantity}" type="number" min="1" onchange="reCalcTotal(this.parentElement.parentElement.id)"></input>`;
 
     //calculating and assigning total price information
+  
     arrayLi[4].innerHTML =
-      (newInput.value * Number(arrayLi[2].innerHTML.slice(0, -1))).toFixed(2) +
+      (arrayLi[3].firstChild.value * Number(arrayLi[2].innerHTML.slice(0, -1))).toFixed(2) +
       " €";
 
     //creating remove button
@@ -175,9 +172,9 @@ const addToCart = () => {
   cartTotal();
 };
 
-const reCalcTotal = () => {
-  let cartQuantity = document.querySelector(`#Cart${productID} input`);
-  let cartLi = document.querySelectorAll(`#Cart${productID} li`);
+const reCalcTotal = (id) => {
+  let cartQuantity = document.querySelector(`#${id} input`);
+  let cartLi = document.querySelectorAll(`#${id} li`);
   cartLi[4].innerHTML =
     (
       Number(cartQuantity.value) * Number(cartLi[2].innerHTML.slice(0, -1))

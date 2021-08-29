@@ -44,10 +44,10 @@ header {
 main {
   .productAndDescription {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     section {
       display: flex;
       flex-wrap: wrap;
@@ -56,7 +56,7 @@ main {
       // border: 1px solid lightgray;
       border-radius: 20px;
       justify-content: center;
-      margin-right: 20px;
+      // margin-right: 10px;
       box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
       padding-top: 40px;
       div {
@@ -96,6 +96,7 @@ main {
       box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
       display: none;
       padding: 20px;
+      margin-left: 20px;
       img {
         width: 100%;
         border-radius: 20px;
@@ -187,7 +188,7 @@ main {
   display: none;
   box-shadow: -8px -8px 12px #ebe6e6, 8px 8px 12px #a3b1c6;
   border-radius: 20px;
-  margin: 10px 30px 0 10px;
+  margin: 10px 10px 0 10px;
   padding: 20px 0;
   overflow: auto;
   p {
@@ -208,7 +209,7 @@ main {
     justify-content: space-between;
     #closeCart {
       margin-right: 20px;
-      // height: 30px;
+      height: 30px;
       padding: 20px 10px;
       font-size: 25px;
       border: none;
@@ -279,4 +280,17 @@ main {
 
 .products{
   transition: 0.3s;
+}
+
+h3{
+  text-align: right;
+  margin:50px;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-style: italic;
+  color: rgb(227, 216, 236);
+  span{
+    font-size: 10px;
+    font-family: "Pacifico", cursive;
+  }
 }
